@@ -32,28 +32,29 @@
 
 <body class="font-workSans">
   <!-- Header Section starts here -->
-  <header class="max-w-screen-2xl mx-auto md:px-10 lg:px-20 bg-[#F9F6E2]">
-    <div class="hero min-h-screen">
+  <header class="max-w-screen-2xl mx-auto sm:px-5 md:px-10 lg:px-20 bg-[#F9F6E2]">
+    <div class="hero">
       <div class="hero-content flex-col lg:flex-row-reverse justify-around">
         <img src="./images/Summer 1.png" class="max-w-sm" />
         <div class="text-center">
           <h5 class="text-lg font-bold">---SALE FEVER---</h5>
-          <h1 class="py-10 text-4xl lg:text-5xl font-bold">Purchase TK 200 or <br> above & <span
+          <h1 class="py-10 text-4xl lg:text-5xl font-bold">Purchase ₹ 200 or <br> above & <span
               class="text-buttonColor">get 20%
               off</span></h1>
           <div class="flex justify-center items-center gap-5">
-            <p>Use Promo Code</p>
-            <button class="btn bg-buttonColor text-white">SELL200</button>
+            <p class="font-medium text-2xl">Use Promo Code</p>
+            <button class="bg-buttonColor font-semibold text-lg rounded-md text-white px-5 py-3">SELL200</button>
           </div>
         </div>
       </div>
     </div>
   </header>
   <!-- Hearder Section ends here -->
-  <div class="grid grid-cols-3 py-14 max-w-screen-2xl mx-auto md:px-10 px-10 bg-[#F8F8F8]">
+  <div class="grid grid-cols-1 lg:grid-cols-3 py-14 max-w-screen-2xl mx-auto sm:px-5 md:px-10 lg:px-20 bg-[#F8F8F8]">
     <!-- Main Section (Product Display section) starts here -->
     <main class="col-span-2">
       <section>
+        <!-- Kitchenware section starts here -->
         <div>
           <h2 class="text-4xl font-semibold pb-5 text-[#111]">Kitchenware</h2>
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
@@ -110,20 +111,44 @@
             </div>
           </div>
         </div>
+        <!-- Kitchenware section ends here -->
       </section>
     </main>
     <!-- Main section (Product Display section) ends here -->
 
     <!-- Aside section starts here -->
-    <aside class="m-12">
+    <aside class="mt-7 lg:m-12">
       <div class="bg-white p-6">
         <div>
-          <h3 class="text-2xl font-semibold pb-3 text-left">Have coupon?</h3>
+          <h3 class="text-2xl font-semibold pb-3">Have coupon?</h3>
         </div>
         <div class="flex">
           <input class="p-3 font-medium text-lg rounded-l-lg border-[1px] border-[#11111180]" type="text"
             placeholder="Coupon code">
           <button class="bg-buttonColor font-semibold text-lg rounded-r-lg text-white p-5">Apply</button>
+        </div>
+      </div>
+      <div class="bg-white mt-7 p-5">
+        <div>
+          <h4 class="text-2xl font-semibold pb-3">Your items</h4>
+          <div id="cart">
+            //cart items added here.
+          </div>
+        </div>
+        <hr>
+        <div class="space-y-1">
+          <div>
+            <h4 class="text-lg font-semibold">Total Price: </h4>
+            <p></p>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold">Discount: </h4>
+            <p></p>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold">Total: </h4>
+            <p></p>
+          </div>
         </div>
       </div>
     </aside>
