@@ -59,7 +59,7 @@
           <h2 class="text-4xl font-semibold pb-5 text-[#111]">Kitchenware</h2>
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
             <!-- Product: 1 -->
-            <div class="py-5 px-5 bg-white rounded-md space-y-2">
+            <div onclick="buyThisNow(this)" class="py-5 px-5 bg-white rounded-md space-y-2">
               <div class="bg-[#1111110D]">
                 <img class="m-auto p-5" src="./images/prod1.png" alt="">
               </div>
@@ -76,7 +76,7 @@
               </div>
             </div>
             <!-- Product: 2 -->
-            <div class="py-5 px-5 bg-white rounded-md space-y-2">
+            <div onclick="buyThisNow(this)" class="py-5 px-5 bg-white rounded-md space-y-2">
               <div class="bg-[#1111110D]">
                 <img class="m-auto p-5" src="./images/prod2.png" alt="">
               </div>
@@ -93,7 +93,7 @@
               </div>
             </div>
             <!-- Product: 3 -->
-            <div class="py-5 px-5 bg-white rounded-md space-y-2">
+            <div onclick="buyThisNow(this)" class="py-5 px-5 bg-white rounded-md space-y-2">
               <div class="bg-[#1111110D]">
                 <img class="m-auto p-5" src="./images/prod3.png" alt="">
               </div>
@@ -242,9 +242,10 @@
           <h3 class="text-2xl font-semibold pb-3">Have coupon?</h3>
         </div>
         <div class="flex">
-          <input class="p-3 font-medium text-lg rounded-l-lg border-[1px] border-[#11111180]" type="text"
-            placeholder="Coupon code">
-          <button class="bg-buttonColor font-semibold text-lg rounded-r-lg text-white p-5">Apply</button>
+          <input id="input-coupon" class="p-3 font-medium text-lg rounded-l-lg border-[1px] border-[#11111180]"
+            type="text" placeholder="Coupon code">
+          <button id="coupon-apply" disabled="true"
+            class="bg-buttonColor font-semibold text-lg rounded-r-lg text-white p-5">Apply</button>
         </div>
       </div>
       <!-- Apply Coupons section ends here -->
@@ -260,19 +261,19 @@
         <hr>
         <div class="mt-5 space-y-2">
           <div>
-            <h4 class="text-lg font-semibold space-x-10">Total Price: <span id="total-price"></span></h4>
+            <h4 class="text-lg font-semibold">Total Price: ₹ <span id="total-price"></span></h4>
             <p></p>
           </div>
           <div>
-            <h4 class="text-lg font-semibold">Discount: </h4>
+            <h4 class="text-lg font-semibold">Discount: ₹ <span id="discount"></span></h4>
             <p></p>
           </div>
           <div>
-            <h4 class="text-lg font-semibold mb-5">Total: </h4>
+            <h4 class="text-lg font-semibold mb-5">Total: ₹ <span id="updated-price"></span></h4>
             <p></p>
           </div>
           <div class="absolute flex justify-center items-center left-14 lg:left-8">
-            <button id="make-purchase" onclick="my_modal_5.showModal()"
+            <button id="make-purchase" disabled="true" onclick="my_modal_5.showModal()"
               class="bg-buttonColor font-semibold text-lg rounded-md px-20 text-white py-5">Make
               Purchase</button>
           </div>
@@ -285,12 +286,15 @@
 
   <!-- Modal -->
   <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-    <form method="dialog" class="modal-box">
-      <h3 class="font-bold text-lg">Hello!</h3>
-      <p class="py-4">Press ESC key or click the button below to close</p>
+    <form method="dialog" class="modal-box mx-auto text-center">
+      <div class="flex justify-center items-center">
+        <img src="./images/congo.png" alt="">
+      </div>
+      <h3 class="font-bold text-5xl">Congratulations</h3>
+      <p class="py-4 font-normal text-xl">Your Purchase the product</p>
+      <button class="bg-buttonColor font-semibold text-lg rounded-md px-20 text-white py-5">Go Home</button>
       <div class="modal-action">
         <!-- if there is a button in form, it will close the modal -->
-        <button class="btn">Close</button>
       </div>
     </form>
   </dialog>
