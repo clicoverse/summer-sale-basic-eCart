@@ -211,7 +211,7 @@
               </div>
             </div>
             <!-- Product: 3 -->
-            <div class="py-5 px-5 bg-white rounded-md space-y-2">
+            <div onclick="buyThisNow(this)" class="py-5 px-5 bg-white rounded-md space-y-2">
               <div class="bg-[#1111110D]">
                 <img class="m-auto p-5" src="./images/prod9.png" alt="">
               </div>
@@ -253,12 +253,12 @@
       <div class="bg-white rounded-md mt-7 p-5 relative">
         <div>
           <h4 class="text-2xl font-semibold pb-3">Your items</h4>
-          <div id="cart">
-            //cart items added here.
+          <div id="cart" class="overflow-y-auto">
+
           </div>
         </div>
         <hr>
-        <div class="space-y-1">
+        <div class="mt-5 space-y-2">
           <div>
             <h4 class="text-lg font-semibold">Total Price: </h4>
             <p></p>
@@ -268,19 +268,33 @@
             <p></p>
           </div>
           <div>
-            <h4 class="text-lg font-semibold">Total: </h4>
+            <h4 class="text-lg font-semibold mb-5">Total: </h4>
             <p></p>
           </div>
-          <div class="absolute flex justify-center items-center"><button
+          <div class="absolute flex justify-center items-center left-14 lg:left-8">
+            <button id="make-purchase" onclick="my_modal_5.showModal()"
               class="bg-buttonColor font-semibold text-lg rounded-md px-20 text-white py-5">Make
-              Purchase</button></div>
+              Purchase</button>
+          </div>
         </div>
       </div>
     </aside>
     <!-- Aside section ends here -->
 
   </div>
+
+  <!-- Modal -->
+  <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+    <form method="dialog" class="modal-box">
+      <h3 class="font-bold text-lg">Hello!</h3>
+      <p class="py-4">Press ESC key or click the button below to close</p>
+      <div class="modal-action">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </div>
+    </form>
+  </dialog>
 </body>
-<script src=""></script>
+<script src="cart.js"></script>
 
 </html>
