@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- tailwind and daisy UI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google font: Work Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'buttonColor': '#E527B2',
+          },
+          fontFamily: {
+            workSans: ['Work Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="shortcut icon" href="./images/favicon.ico" type="favicon">
+  <title>Summer Sale</title>
+</head>
+
+<body class="font-workSans">
+  <!-- Header Section starts here -->
+  <header class="max-w-screen-2xl mx-auto md:px-10 lg:px-20 bg-[#F9F6E2]">
+    <div class="hero min-h-screen">
+      <div class="hero-content flex-col lg:flex-row-reverse justify-around">
+        <img src="./images/Summer 1.png" class="max-w-sm" />
+        <div class="text-center">
+          <h5 class="text-lg font-bold">---SALE FEVER---</h5>
+          <h1 class="py-10 text-4xl lg:text-5xl font-bold">Purchase TK 200 or <br> above & <span
+              class="text-buttonColor">get 20%
+              off</span></h1>
+          <div class="flex justify-center items-center gap-5">
+            <p>Use Promo Code</p>
+            <button class="btn bg-buttonColor text-white">SELL200</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Hearder Section ends here -->
+  <div class="grid grid-cols-3 py-14 max-w-screen-2xl mx-auto md:px-10 px-10 bg-[#F8F8F8]">
+    <!-- Main Section (Product Display section) starts here -->
+    <main class="col-span-2">
+      <section>
+        <div>
+          <h2 class="text-4xl font-semibold pb-5 text-[#111]">Kitchenware</h2>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            <!-- Product: 1 -->
+            <div class="py-5 px-5 bg-white rounded-md space-y-2">
+              <div class="bg-[#1111110D]">
+                <img class="m-auto p-5" src="./images/prod1.png" alt="">
+              </div>
+              <div class="items-center text-center">
+                <div class="rating">
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                </div>
+                <p class="font-semibold">K. Accessories</p>
+                <p class="text-[#11111180]">₹ 38.00</p>
+              </div>
+            </div>
+            <!-- Product: 2 -->
+            <div class="py-5 px-5 bg-white rounded-md space-y-2">
+              <div class="bg-[#1111110D]">
+                <img class="m-auto p-5" src="./images/prod2.png" alt="">
+              </div>
+              <div class="items-center text-center">
+                <div class="rating">
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                </div>
+                <p class="font-semibold">K. Accessories</p>
+                <p class="text-[#11111180]">₹ 25.00</p>
+              </div>
+            </div>
+            <!-- Product: 3 -->
+            <div class="py-5 px-5 bg-white rounded-md space-y-2">
+              <div class="bg-[#1111110D]">
+                <img class="m-auto p-5" src="./images/prod3.png" alt="">
+              </div>
+              <div class="items-center text-center">
+                <div class="rating">
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                </div>
+                <p class="font-semibold">Home Cooker</p>
+                <p class="text-[#11111180]">₹ 49.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Main section (Product Display section) ends here -->
+
+    <!-- Aside section starts here -->
+    <aside class="m-12">
+      <div class="bg-white p-6">
+        <div>
+          <h3 class="text-2xl font-semibold pb-3 text-left">Have coupon?</h3>
+        </div>
+        <div class="flex">
+          <input class="p-3 font-medium text-lg rounded-l-lg border-[1px] border-[#11111180]" type="text"
+            placeholder="Coupon code">
+          <button class="bg-buttonColor font-semibold text-lg rounded-r-lg text-white p-5">Apply</button>
+        </div>
+      </div>
+    </aside>
+    <!-- Aside section ends here -->
+
+  </div>
+</body>
+<script src=""></script>
+
+</html>
