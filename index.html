@@ -118,7 +118,7 @@
           <h2 class="text-4xl font-semibold pb-5 text-[#111]">Sportswear</h2>
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
             <!-- Product: 1 -->
-            <div class="py-5 px-5 bg-white rounded-md space-y-2">
+            <div onclick="buyThisNow(this)" class="py-5 px-5 bg-white rounded-md space-y-2">
               <div class="bg-[#1111110D]">
                 <img class="m-auto p-5" src="./images/prod4.png" alt="">
               </div>
@@ -135,7 +135,7 @@
               </div>
             </div>
             <!-- Product: 2 -->
-            <div class="py-5 px-5 bg-white rounded-md space-y-2">
+            <div onclick="buyThisNow(this)" class="py-5 px-5 bg-white rounded-md space-y-2">
               <div class="bg-[#1111110D]">
                 <img class="m-auto p-5" src="./images/prod5.png" alt="">
               </div>
@@ -152,7 +152,7 @@
               </div>
             </div>
             <!-- Product: 3 -->
-            <div class="py-5 px-5 bg-white rounded-md space-y-2">
+            <div onclick="buyThisNow(this)" class="py-5 px-5 bg-white rounded-md space-y-2">
               <div class="bg-[#1111110D]">
                 <img class="m-auto p-5" src="./images/prod6.png" alt="">
               </div>
@@ -177,7 +177,7 @@
           <h2 class="text-4xl font-semibold pb-5 text-[#111]">Furniture</h2>
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
             <!-- Product: 1 -->
-            <div class="py-5 px-5 bg-white rounded-md space-y-2">
+            <div onclick="buyThisNow(this)" class="py-5 px-5 bg-white rounded-md space-y-2">
               <div class="bg-[#1111110D]">
                 <img class="m-auto p-5" src="./images/prod7.png" alt="">
               </div>
@@ -194,7 +194,7 @@
               </div>
             </div>
             <!-- Product: 2 -->
-            <div class="py-5 px-5 bg-white rounded-md space-y-2">
+            <div onclick="buyThisNow(this)" class="py-5 px-5 bg-white rounded-md space-y-2">
               <div class="bg-[#1111110D]">
                 <img class="m-auto p-5" src="./images/prod8.png" alt="">
               </div>
@@ -292,7 +292,8 @@
       </div>
       <h3 class="font-bold text-5xl">Congratulations</h3>
       <p class="py-4 font-normal text-xl">Your Purchase the product</p>
-      <button class="bg-buttonColor font-semibold text-lg rounded-md px-20 text-white py-5">Go Home</button>
+      <button id="go-home" class="bg-buttonColor font-semibold text-lg rounded-md px-20 text-white py-5">Go
+        Home</button>
       <div class="modal-action">
         <!-- if there is a button in form, it will close the modal -->
       </div>

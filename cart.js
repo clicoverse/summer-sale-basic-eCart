@@ -1,5 +1,6 @@
 const makePurchaseButton = document.getElementById("make-purchase"); //Make Purchase button.
 const cartItmesDisplay = document.getElementById("cart"); // Products displayed in the cart item here.
+const totalPriceDisplay = document.getElementById("total-price"); // Total price display section.
 const couponCodeApplyButton = document.getElementById("coupon-apply"); // Coupon code apply button[SELL200]
 const discountElement = document.getElementById("discount"); // Discount display section in the cart
 const updatedPriceElement = document.getElementById("updated-price"); // Updated Balance display section
@@ -43,24 +44,31 @@ function buyThisNow(target) {
   let priceValue = target.childNodes[3].childNodes[5].innerText.split(" ");
   let price = parseFloat(priceValue[1]); // get price of the product
   total = parseFloat(total) + parseFloat(price);
-  document.getElementById("total-price").innerText = total.toFixed(2); //total price updated to the cart section
+  totalPriceDisplay.innerText = total.toFixed(2); //total price updated to the cart section
   couponButtonCondition(); // call coupon apply button condition.
 }
 couponCodeApplyButton.addEventListener("click", function () {
   const inputCouponCode = document.getElementById("input-coupon");
-  const couponCode = inputCouponCode.value;
+  let couponCode = inputCouponCode.value;
   const myRefferCouponCode = "SELL200";
   if (couponCode === myRefferCouponCode) {
     const appliedDiscount = total * 0.2; // 20% coupon code apply
     discountElement.innerText = appliedDiscount.toFixed(2); // display discount amount in discount section
     updatedBalace = total - appliedDiscount;
-    updatedPriceElement.innerText = updatedBalace;
-    console.log(updatedBalace);
+    updatedPriceElement.innerText = updatedBalace.toFixed(2); // updated balance
   } else {
     alert("Please apply valid coupon code");
   }
+  inputCouponCode.value = " ";
 });
 
 couponButtonCondition();
 purchaseButtonCodition();
+
+document.getElementById("go-home").addEventListener("click", function () {
+  cartItmesDisplay.innerText = " "; // cartitem display empty.
+  discountElement.innerText = " "; // discount display empty.
+  totalPriceDisplay.innerText = " "; // total price display empty.
+  updatedPriceElement.innerText = " "; // updated price display empty.
+});
 // console.log(purchaseButtonCodition());
